@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="user-dashboard.html">SDG STARTER</a>
+    <div class="nav-links">
+      <a href="map.html">Map</a>
+      <a href="profile.html">Profile</a>
+      <button id="logoutButton" class="button small">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container dashboard">
+    <div class="page-heading">
+      <div>
+        <span class="eyebrow">USER DASHBOARD</span>
+        <h1 id="welcome">Lorem ipsum</h1>
+      </div>
+    </div>
+
+    <section class="stats-grid">
+      <article class="stat-card"><span>Resources</span><strong>24</strong></article>
+      <article class="stat-card"><span>Locations</span><strong>18</strong></article>
+      <article class="stat-card"><span>Alerts</span><strong>05</strong></article>
+      <article class="stat-card"><span>Reports</span><strong>09</strong></article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel">
+        <div class="panel-heading">
+          <h2>Location Map</h2>
+          <a href="map.html">View</a>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-pin p1"></div>
+          <div class="map-pin p2"></div>
+          <div class="map-pin p3"></div>
+          <span>MAP PLACEHOLDER</span>
+          <small>Activate after the problem statement is finalized.</small>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-heading"><h2>Notifications</h2></div>
+        <div id="notifications" class="list"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Recent Reports</h2>
+      </div>
+      <div id="reports" class="list"></div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

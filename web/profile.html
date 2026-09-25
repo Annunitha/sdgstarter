@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="user-dashboard.html">SDG STARTER</a>
+    <div class="nav-links"><a href="user-dashboard.html">Dashboard</a></div>
+  </nav>
+
+  <main class="container narrow">
+    <section class="panel">
+      <span class="eyebrow">PROFILE</span>
+      <h1>Account Details</h1>
+      <div id="profile"></div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script>
+    requireAuth("user").then(user => {
+      document.getElementById("profile").innerHTML = `
+        <div class="profile-row"><strong>Name</strong><span>${escapeHtml(user.name)}</span></div>
+        <div class="profile-row"><strong>Email</strong><span>${escapeHtml(user.email)}</span></div>
+        <div class="profile-row"><strong>Role</strong><span>${escapeHtml(user.role)}</span></div>
+        <div class="profile-row"><strong>Status</strong><span>${escapeHtml(user.status)}</span></div>
+      `;
+    });
+  </script>
+</body>
+</html>

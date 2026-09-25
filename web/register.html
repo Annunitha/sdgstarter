@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <a class="brand centered" href="index.html">SDG STARTER</a>
+    <h1>Create Account</h1>
+    <p class="muted">Lorem ipsum dolor sit amet.</p>
+
+    <form id="registerForm">
+      <label>Name
+        <input id="name" type="text" required placeholder="Lorem Ipsum">
+      </label>
+      <label>Email
+        <input id="email" type="email" required placeholder="name@example.com">
+      </label>
+      <label>Password
+        <input id="password" type="password" minlength="6" required placeholder="••••••••">
+      </label>
+      <button class="button full" type="submit">Register</button>
+      <div id="formMessage" class="form-message"></div>
+    </form>
+
+    <div class="auth-links">
+      <a href="login.html">Already registered?</a>
+      <a href="index.html">Home</a>
+    </div>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

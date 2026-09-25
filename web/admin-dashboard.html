@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="admin-dashboard.html">SDG STARTER</a>
+    <div class="nav-links">
+      <a href="map.html">Map</a>
+      <button id="logoutButton" class="button small">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container dashboard">
+    <div class="page-heading">
+      <div>
+        <span class="eyebrow">ADMIN DASHBOARD</span>
+        <h1>Control Center</h1>
+      </div>
+    </div>
+
+    <section class="stats-grid">
+      <article class="stat-card"><span>Total Users</span><strong id="userCount">—</strong></article>
+      <article class="stat-card"><span>Locations</span><strong>18</strong></article>
+      <article class="stat-card"><span>Reports</span><strong>09</strong></article>
+      <article class="stat-card"><span>Alerts</span><strong>05</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>User Management</h2>
+        <button id="refreshUsers" class="button small">Refresh</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Email</th><th>Role</th><th>Status</th><th>Action</th></tr>
+          </thead>
+          <tbody id="usersTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
