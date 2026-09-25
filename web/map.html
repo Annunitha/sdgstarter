@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Map</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <nav class="navbar">
-    <a class="brand" href="index.html">SDG STARTER</a>
-    <div class="nav-links"><a href="user-dashboard.html">Dashboard</a></div>
-  </nav>
+<html>
+  <head>
+    <title>Map with APIss</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Our Location</h3>
+    
+    <div id="map"></div>
 
-  <main class="container">
-    <section class="page-heading">
-      <div>
-        <span class="eyebrow">LOCATION MODULE</span>
-        <h1>Map</h1>
-        <p class="muted">Temporary map area. Connect a real map after the problem statement is finalized.</p>
-      </div>
-    </section>
+    <script>
+      let map;
+      function initMap() {
+        const myLocation = { lat: 40.7128, lng: -74.0060 };
+        
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: myLocation,
+          zoom: 14,
+        });
 
-    <section class="map-large">
-      <div class="map-pin p1"></div>
-      <div class="map-pin p2"></div>
-      <div class="map-pin p3"></div>
-      <div class="map-pin p4"></div>
-      <div class="map-center-text">
-        <strong>MAP PLACEHOLDER</strong>
-        <span>Restaurants / water sources / facilities / climate points</span>
-      </div>
-    </section>
-  </main>
-</body>
+        new google.maps.Marker({
+          position: myLocation,
+          map: map,
+          title: "We are here!",
+        });
+      }
+    </script>
+
+    <script src="https://googleapis.com" async defer></script>
+  </body>
 </html>
